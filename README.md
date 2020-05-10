@@ -1,2 +1,2 @@
 # Web-Programming
-*JavaScript, NodeJS and HTML, CSS Weekly Assignments*
+*JavaScript, NodeJS, HTML and CSS Weekly Assignments*
