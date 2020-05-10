@@ -1,15 +1,21 @@
 const questionOne = function questionOne(arr) {
-    var x = arr[0];
-    var y = arr[1];
-    var z = arr[2];
 
-    var res = (x*x) + (y*y) + (z*z);
+    let sum =0;
+    for(let i=0;i<arr.length;i++)
+    {
+        let elementSquare =  arr[i]*arr[i];
+        sum = sum + elementSquare;
+    }
 
-    return res; 
+    return sum; 
 }
 
 const questionTwo = function questionTwo(num) { 
-    if (num==0 || num==1)
+    if(num<1)
+    {
+        return 0;
+    }
+    else if (num==1)
     {
         return 1;
     }
@@ -30,24 +36,32 @@ const questionTwo = function questionTwo(num) {
 }
 
 const questionThree = function questionThree(text) {
-    var strArr = text.split("");
-    var i;
-    var count = 0;
-    for(i=0;i<strArr.length;i++)
+
+    if(text)
     {
-        if(strArr[i]=="A" || strArr[i]=="a" || strArr[i]=="E" || strArr[i]=="e" || strArr[i]=="I" || strArr[i]=="i" || strArr[i]=="O" || strArr[i]=="o" || strArr[i]=="U" || strArr[i]=="u")
+        var strArr = text.split("");
+        var i;
+        var count = 0;
+        for(i=0;i<strArr.length;i++)
         {
-            count++;
+            if(strArr[i]=="A" || strArr[i]=="a" || strArr[i]=="E" || strArr[i]=="e" || strArr[i]=="I" || strArr[i]=="i" || strArr[i]=="O" || strArr[i]=="o" || strArr[i]=="U" || strArr[i]=="u")
+            {
+                count++;
+            }
+            
         }
-        
-    }
-    if (count==0)
-    {
-        return "No vowels found!"
+        if (count==0)
+        {
+            return 0;
+        }
+        else
+        {
+            return count;
+        }
     }
     else
     {
-            return count;
+        return 0;
     }
     
 }
@@ -75,7 +89,7 @@ const questionFour = function questionFour(num) {
 module.exports = {
     firstName: "Viraj", 
     lastName: "Rokade", 
-    studentId: "10446730",
+    studentId: "YOUR_ID",
     questionOne,
     questionTwo,
     questionThree,
